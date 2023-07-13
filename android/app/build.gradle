@@ -38,6 +38,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    
+    lintOptions {
+        checkReleaseBuilds false
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -54,11 +58,6 @@ android {
         targetSdkVersion 32
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        android { ...
-            lintOptions {
-            checkReleaseBuilds false
-            }
-        }
     }
 
     buildTypes {
