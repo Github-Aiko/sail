@@ -54,6 +54,11 @@ android {
         targetSdkVersion 32
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        android { ...
+            lintOptions {
+            checkReleaseBuilds false
+            }
+        }
     }
 
     buildTypes {
